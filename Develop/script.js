@@ -7,18 +7,23 @@ var generateBtn = document.querySelector("#generate");
 generateBtn.addEventListener("click", onclick);
 
 
+// function containing prompts and other functions to generate password
+
 generateBtn.onclick = function(){
 
   var number = prompt ('Enter a number 8 to 128.', 'default answer');
-
-    if(number<8 || number>128){
+      if(number === null){
+        return;
+      }
+    if(number<8 || number>128 || typeof number === 'string'){
       do{
         alert ('Please enter a valid answer');
         var number = prompt ('Enter a number 8 to 128.', 'default answer');
       }
       while(number<8 || number>128);
-      }else{}
+      }
 
+      // can use confirm
   var letter = prompt('Do you want uppercase letters?', 'yes or no');
 
       // not operator has to be outside if there is an or (||) statement 
@@ -52,6 +57,9 @@ generateBtn.onclick = function(){
       while(!(includeCharacters == 'yes' || includeCharacters == 'no'));
     }else{}
    
+    if(number === null){
+      return;
+    }
 
 
 // parseInt used to turn number stored as a string from prompt above into an integer
@@ -72,6 +80,7 @@ generateBtn.onclick = function(){
  
 
 // conditional statments depending on user prompt input 
+
     if(letter == 'yes' && includeNumbers == 'yes' && includeCharacters == 'yes'){
       var mainArray=''
       var mainArray = lowerCase + upperCase + numberString + specialCharacters
