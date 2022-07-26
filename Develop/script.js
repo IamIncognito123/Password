@@ -12,7 +12,7 @@ generateBtn.addEventListener("click", onclick);
 generateBtn.onclick = function(){
 
   var number = prompt ('Enter a number 8 to 128.', 'default answer');
-    if(number<8 || number>128 || typeof number === 'string'){
+    if(number<8 || number>128){
       do{
         alert ('Please enter a valid answer');
         var number = prompt ('Enter a number 8 to 128.', 'default answer');
