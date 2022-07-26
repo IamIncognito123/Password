@@ -12,9 +12,6 @@ generateBtn.addEventListener("click", onclick);
 generateBtn.onclick = function(){
 
   var number = prompt ('Enter a number 8 to 128.', 'default answer');
-      if(number === null){
-        return;
-      }
     if(number<8 || number>128 || typeof number === 'string'){
       do{
         alert ('Please enter a valid answer');
@@ -22,7 +19,7 @@ generateBtn.onclick = function(){
         }
       }
       while(number<8 || number>128 || typeof number === 'string');
-      }
+      }else{}
 
       // can use confirm
   var letter = prompt('Do you want uppercase letters?', 'yes or no');
