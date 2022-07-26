@@ -17,7 +17,6 @@ generateBtn.onclick = function(){
         alert ('Please enter a valid answer');
         var number = prompt ('Enter a number 8 to 128.', 'default answer');
         }
-      }
       while(number<8 || number>128 || typeof number === 'string');
       }else{}
 
