@@ -74,140 +74,57 @@ generateBtn.onclick = function(){
 
 // conditional statments depending on user prompt input 
 
+function writePassword() {
+
     if(letter == 'yes' && includeNumbers == 'yes' && includeCharacters == 'yes'){
     
       var mainArray = lowerCase + upperCase + numberString + specialCharacters
     
-        function writePassword() {
-          var password = '';
-          var passwordText = document.querySelector("#password");
-
-        for(let i = 0; i< passwordlength; i++){
-            password += mainArray.charAt(Math.floor(Math.random()*mainArray.length))
-          }
-         
-          passwordText.value = password;
-        }
-        writePassword();
 
     }else if(letter == 'no' && includeNumbers == 'yes' && includeCharacters == 'yes'){
 
       var mainArray = lowerCase + numberString + specialCharacters
-    
-        function writePassword() {
-          var password = '';
-          var passwordText = document.querySelector("#password");
 
-          
-        for(let i = 0; i< passwordlength; i++){
-            password += mainArray.charAt(Math.floor(Math.random()*mainArray.length))
-          }
-        
-        
-          passwordText.value = password;
-        }
-        writePassword();
 
     }else if(letter == 'no' && includeNumbers == 'no' && includeCharacters == 'yes'){
 
       var mainArray = lowerCase + specialCharacters
-    
 
-        function writePassword() {
-          var password = '';
-          var passwordText = document.querySelector("#password");
-
-
-        for(let i = 0; i< passwordlength; i++){
-            password += mainArray.charAt(Math.floor(Math.random()*mainArray.length))
-          }
-        
-        
-          passwordText.value = password;
-        }
-        writePassword();
 
     }else if(letter == 'yes' && includeNumbers == 'no' && includeCharacters == 'yes'){
 
       var mainArray = lowerCase + upperCase + specialCharacters 
 
-        function writePassword() {
-          var password = '';
-          var passwordText = document.querySelector("#password");
-
-        for(let i = 0; i< passwordlength; i++){
-            password += mainArray.charAt(Math.floor(Math.random()*mainArray.length))
-          }
-        
-          passwordText.value = password;
-        }
-        writePassword();
         
     }else if(letter == 'yes' && includeNumbers == 'no' && includeCharacters == 'no'){
 
       var mainArray = lowerCase + upperCase 
-    
-        function writePassword() {
-          var password = '';
-          var passwordText = document.querySelector("#password");
-
-        for(let i = 0; i< passwordlength; i++){
-            password += mainArray.charAt(Math.floor(Math.random()*mainArray.length))
-          }
-        
-          passwordText.value = password;
-        }
-        writePassword();
+  
 
     }else if(letter == 'yes' && includeNumbers == 'yes' && includeCharacters == 'no'){
 
       var mainArray = lowerCase + upperCase + numberString
     
-        function writePassword() {
-          var password = '';
-          var passwordText = document.querySelector("#password");
-
-        for(let i = 0; i< passwordlength; i++){
-            password += mainArray.charAt(Math.floor(Math.random()*mainArray.length))
-          }
-        
-          passwordText.value = password;
-        }
-        writePassword();
 
     }else if(letter == 'no' && includeNumbers == 'yes' && includeCharacters == 'no'){
 
       var mainArray = lowerCase + numberString
-    
-        function writePassword() {
-          var password = '';
-          var passwordText = document.querySelector("#password");
-
-        for(let i = 0; i< passwordlength; i++){
-            password += mainArray.charAt(Math.floor(Math.random()*mainArray.length))
-          }
-        
-          passwordText.value = password;
-        }
-        writePassword();
 
     }else if(letter == 'no' && includeNumbers == 'no' && includeCharacters == 'no'){
 
       var mainArray = lowerCase 
-    
-        function writePassword() {
-          var password = '';
-          var passwordText = document.querySelector("#password");
+  }
+  
+      var password = '';
+      var passwordText = document.querySelector("#password");
 
-        for(let i = 0; i< passwordlength; i++){
-            password += mainArray.charAt(Math.floor(Math.random()*mainArray.length))
-          }
-        
-          passwordText.value = password;
-        }
-        writePassword(); 
-        
+    for(let i = 0; i< passwordlength; i++){
+        password += mainArray.charAt(Math.floor(Math.random()*mainArray.length))
+      }
+     
+      passwordText.value = password;
     }
+    writePassword();
 
 }
 
